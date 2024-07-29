@@ -82,7 +82,7 @@ err-404-img: "/img/logo.lpeg"
 
 # Sections shown in the index page
 pages_list:
-  About: "about"
+  # About: "about"
   Contact: "contact"
 # Exclusion list from the generated _site
 exclude:
