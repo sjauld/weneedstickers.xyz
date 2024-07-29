@@ -1,0 +1,101 @@
+# Site settings
+
+# NB! Set your site's url, otherwise nothing will work
+url: "https://weneedstickers.xyz/"
+
+#############
+# HTML Head #
+#############
+lang: "en"
+author: "We Need Stickers"
+title: "{ We Need Stickers }"
+description: "We Need Stickers - Official Website"
+keywords: "we need stickers, lofi, lounge, music, blues, jazz"
+favicon: "/img/favicon.ico"
+################
+# Header layout #
+################
+black-favicon: "/img/favicon.ico"
+background-img: "../img/intro-bg.jpg"
+##############################
+# Dynamic Text on the Header #
+##############################
+dynamic-typing: True
+shuffle: True # Shuffle the lines.
+loop: True
+loop-count: False # Set False for infinite loop, or set any number for finite loop.
+type-speed: 10
+start-delay: 200
+delete-delay: 5000
+lines: # You can add HTML Tags in the Text
+  - text: "By My Side"
+  - text: "Smoking By The Pipeline"
+  - text: "'65 Falcon'"
+  - text: "4 Steps to Befriending A Crowe"
+  - text: "Off My Mind"
+  - text: "Theme to my Sex Tap"
+  - text: "One Zero"
+  - text: "Tombaugh Regio"
+
+me-img: "/img/cubes.jpeg"
+# To use github profile pic uncomment the following line and replace 'user_name'
+# with your github user name.
+
+# me-img: "https://github.com/user_name.png?size=500"
+
+# To use gravatar profile pic uncomment the following line and replace 'email_hash'
+# with your gravatar profile email hash.
+# You can create the email hash by using an online tool like 'http://www.md5hashgenerator.com/'
+# just enter your email and it will generate the hash.
+
+# me-img: "https://www.gravatar.com/avatar/email_hash?s=500"
+
+##############################
+# Color the browser elements #
+##############################
+color-browser: "#000000"
+apple-status-bar-style: "black"
+################
+# Web app mode #
+################
+web-app-mode: True
+# Icons for Web App mode
+icon-36p: "/img/web-app/icon-36p.png"
+icon-48p: "/img/web-app/icon-48p.png"
+icon-72p: "/img/web-app/icon-72p.png"
+icon-96p: "/img/web-app/icon-96p.png"
+icon-144p: "/img/web-app/icon-144p.png"
+icon-192p: "/img/web-app/icon-192p.png"
+###########
+# Contact #
+###########
+email: "bookings@weneedstickers.xyz"
+# Set a url pointing to your publish PGP Public Key here, and it will appear in the Contact section
+pgp: False
+############
+# 404 page #
+############
+err-404-img: "/img/logo.lpeg"
+################################################################################
+
+# NB! Tread carefully if you want to change the variables below this point!
+
+# Sections shown in the index page
+pages_list:
+  About: "about"
+  Contact: "contact"
+# Exclusion list from the generated _site
+exclude:
+  - LICENSE
+  - README.md
+  - CONTRIBUTING
+  - CONTRIBUTORS
+  - scripts
+  - Dockerfile
+  - docker-compose.yml
+# Enable minification SASS
+sass:
+  style: compressed
+plugins:
+  - jekyll-paginate
+  - jekyll-spaceship

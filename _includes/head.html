@@ -1,0 +1,61 @@
+<!-- HEAD Start -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{site.description}}" />
+  <meta name="author" content="{{site.author}}" />
+  <meta name="keywords" content="{{site.keywords}}" />
+  <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.repository_name}}" />
+  <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
+
+  <!-- CSS links -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
+    rel="stylesheet"
+    integrity="sha512-pli9aKq758PMdsqjNA+Au4CJ7ZatLCCXinnlSfv023z4xmzl8s+Jbj2qNR7RI8DsxFp5e8OvbYGDACzKntZE9w=="
+    crossorigin="anonymous"
+    defer
+  />
+  <link href="{{site.url}}/css/grayscale.css" rel="stylesheet" />
+
+  {% if page.section-type == "index" %}
+    <link href="{{site.url}}/css/timeline.css" rel="stylesheet" />
+  {% endif %}
+
+  {% if page.section-type == "post" %}
+    {% if site.syntax-highlight %}
+      <link rel="stylesheet" type="text/css" href=" {{site.url}}/css/everforest.css" />
+    {% endif %}
+    <link rel="stylesheet" href="{{site.url}}/css/rrssb.css" />
+  {% endif %}
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet" defer>
+  <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    rel="stylesheet"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    defer
+  />
+
+  {% if site.favicon %}
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{site.url}}{{site.favicon}}"
+    />
+  {% endif %}
+
+  {% if page.url == "/404.html" | prepend: {{site.url}} %}
+    <meta http-equiv="refresh" content="20; url={{site.url}}/" />
+  {% endif %}
+
+  {% include web-app.html %}
+
+  {% include color-browser.html %}
+
+</head>
+
+<!-- HEAD End -->
